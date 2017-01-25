@@ -1,0 +1,37 @@
+---
+- hosts: localhost
+  tasks:
+
+  - name: Update apt cache
+    apt:
+      update_cache: yes
+    become: True
+
+#### Continue from here to install/config/start nginx
+## Example steps
+#
+  - name: Install nginx
+    apt:
+      name: nginx
+
+#
+# - name: Change the default nginx.conf
+#   template:
+#     src: ???
+#     dest: ???
+#   ???
+#
+# - name: Create sites-available
+#   template:
+#     src: ???
+#     dest: ???
+#   ???
+#
+# - Enable or disable nginx
+#   service:
+#     ???
+# - Start or stop nginx
+#   service:
+#     ???
+#
+### You don't have to follow the exact steps above
