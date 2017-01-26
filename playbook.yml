@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 54.158.82.18
   tasks:
 
   - name: Update apt cache
@@ -13,12 +13,13 @@
   - name: Install nginx
     apt:
       name: nginx
+    become: True
 
 #
 # - name: Change the default nginx.conf
 #   template:
-#     src: ???
-#     dest: ???
+#     src: ??? put local nginx config here
+#     dest: ??? this is where the config will go
 #   ???
 #
 # - name: Create sites-available
